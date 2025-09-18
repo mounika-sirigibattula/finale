@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f9fafb, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .todo-input {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .todo-input input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .todo-input button {
+      padding: 10px 20px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: not-allowed; /* No JS, so disabled */
+      opacity: 0.7;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    li.completed span {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .filters button {
+      background: none;
+      border: none;
+      color: #4f46e5;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My To-Do List</h1>
+
+    <div class="todo-input">
+      <input type="text" placeholder="Add a task" disabled>
+      <button disabled>Add</button>
+    </div>
+
+    <ul>
+      <li>
+        <span>Buy groceries</span>
+        <input type="checkbox" checked disabled>
+      </li>
+      <li class="completed">
+        <span>Walk the dog</span>
+        <input type="checkbox" checked disabled>
+      </li>
+      <li>
+        <span>Read a book</span>
+        <input type="checkbox" disabled>
+      </li>
+    </ul>
+
+    <div class="filters">
+      <button disabled>All</button>
+      <button disabled>Active</button>
+      <button disabled>Completed</button>
+    </div>
+  </div>
+</body>
+</html>
